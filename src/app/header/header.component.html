@@ -1,0 +1,18 @@
+<header class="w-100 position-sticky top-0 py-3 px-3 bg-secondary row m-auto align-items-center">
+    <div class="col-9">
+        <span class="text-black">Logo</span>
+    </div>
+    <nav class="bg-secondary active" [class.active]="showNav">
+        <a class="text-black d-block mb-2 text-decoration-none">Inicio</a>
+        <a class="text-black d-block mb-2 text-decoration-none">Etiquetas</a>
+        <a class="text-black d-block text-decoration-none">Configuracion</a>
+        <button type="button" class="btn text-black position-absolute" (click)="toggleNav()">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </nav>
+    <div class="col-3 text-end">
+        <button type="button" class="btn" (click)="toggleNav()" >
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+</header>
