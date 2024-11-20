@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterComponent } from './footer.component';
+import { NuevaNotaComponent } from './nueva-nota.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('NuevaNotaComponent', () => {
+  let component: NuevaNotaComponent;
+  let fixture: ComponentFixture<NuevaNotaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FooterComponent]
+      declarations: [NuevaNotaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(NuevaNotaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

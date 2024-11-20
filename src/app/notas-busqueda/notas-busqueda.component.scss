@@ -1,0 +1,23 @@
+div{
+  h3{
+    font-size: 35px;
+  }
+  .search{
+    max-width: 300px;
+  }
+
+  .has-search .form-control {
+    padding-left: 35px;
+  }
+
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    padding-left:10px;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #272727;
+  }
+}
