@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,12 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NavbarBottomComponent } from './navbar-bottom/navbar-bottom.component';
 import { NotasBusquedaComponent } from './notas-busqueda/notas-busqueda.component';
 import { NuevaNotaComponent } from './nueva-nota/nueva-nota.component';
+import { RegistroComponent } from './registro/registro.component';
+
+import localePy from '@angular/common/locales/es-PY';
+import {registerLocaleData} from "@angular/common";
+import { ConfiguracionComponent } from './configuracion/configuracion.component';
+registerLocaleData(localePy, 'es');
 
 @NgModule({
   declarations: [
@@ -25,14 +31,18 @@ import { NuevaNotaComponent } from './nueva-nota/nueva-nota.component';
     InicioComponent,
     NavbarBottomComponent,
     NotasBusquedaComponent,
-    NuevaNotaComponent
+    NuevaNotaComponent,
+    RegistroComponent,
+    ConfiguracionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID, useValue: 'es'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

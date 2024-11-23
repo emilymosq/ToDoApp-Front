@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './notas-busqueda.component.scss'
 })
 export class NotasBusquedaComponent {
-
+  date = Date.now();
 }

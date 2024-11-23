@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-inicio',
@@ -8,9 +7,4 @@ import {Router} from "@angular/router";
 })
 export class InicioComponent {
 
-  constructor( private router: Router ) {}
-
-  miMetodo(){
-    this.router.navigate(['/app/nueva-nota']);
-  }
 }
