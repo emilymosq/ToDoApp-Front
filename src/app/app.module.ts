@@ -18,6 +18,7 @@ import { RegistroComponent } from './registro/registro.component';
 import localePy from '@angular/common/locales/es-PY';
 import {registerLocaleData} from "@angular/common";
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import {ReactiveFormsModule} from "@angular/forms";
 registerLocaleData(localePy, 'es');
 
 @NgModule({
@@ -38,7 +39,8 @@ registerLocaleData(localePy, 'es');
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+      ReactiveFormsModule
   ],
   providers: [{
     provide: LOCALE_ID, useValue: 'es'

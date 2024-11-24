@@ -6,37 +6,30 @@
         <h3 class="m-0 text-white fs-1 mx-auto">Nueva nota</h3>
     </div>
     <div class="w-100 mt-4 px-5 fs-5">
-        <form>
+        <form [formGroup]="notaForm">
             <div class="mb-4">
                 <label for="titulo" class="form-label mx-2">Titulo</label>
-                <input type="text" class="form-control p-3 rounded-pill" id="titulo" placeholder="Ingresa el título">
+                <input formControlName="titulo" type="text" class="form-control p-3 rounded-pill" id="titulo" placeholder="Ingresa el título">
             </div>
             <div class="mb-4">
                 <label for="descripcion" class="form-label mx-2">Descripción</label>
-                <textarea class="form-control p-3 rounded-4" id="descripcion" rows="5" placeholder="Ingresa una descripción"></textarea>
+                <textarea formControlName="descripcion" class="form-control p-3 rounded-4" id="descripcion" rows="5" placeholder="Ingresa una descripción"></textarea>
             </div>
             <div class="mb-4">
-                <i class="bi bi-exclamation-triangle text-warning fs-4 mx-2"></i>
+                <i class="bi bi-exclamation-triangle fs-4 mx-2"></i>
                 <label for="prioridad" class="form-label">Prioridad</label>
-                <select id="prioridad" class="form-select p-3 rounded-pill">
-                    <option value="alta">Prioridad alta</option>
-                    <option value="media">Prioridad media</option>
-                    <option value="baja">Prioridad baja</option>
+                <select formControlName="prioridad" id="prioridad" class="form-select p-3 rounded-pill">
+                    <option value="" disabled selected></option>
+                    <option *ngFor="let prioridad of prioridades" [value]="prioridad">{{  prioridad }}</option>
                 </select>
             </div>
             <div class="mb-4">
-                <i class="bi bi-tag text-success fs-4 mx-2"></i>
+                <i class="bi bi-tag fs-4 mx-2"></i>
                 <label for="etiquetas" class="form-label">Etiquetas</label>
-                <select id="etiquetas" class="form-select p-3 rounded-pill">
-                    <option value="rutina">Rutina</option>
-                    <option value="trabajo">Trabajo</option>
-                    <option value="personal">Personal</option>
-                </select>
+                <input formControlName="etiqueta" type="text" class="form-control p-3 rounded-pill" id="etiquetas" placeholder="Ingresa el título">
             </div>
             <div class="mt-4">
-                <a routerLink="/app/inicio">
-                    <button type="submit" class="btn btn-secondary text-light w-100 p-3 rounded-pill">Guardar nota</button>
-                </a>
+                    <button type="submit" class="btn btn-secondary text-light w-100 p-3 rounded-pill" (click)="agregarNota()">Guardar nota</button>
             </div>
         </form>
     </div>
