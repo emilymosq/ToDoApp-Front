@@ -12,9 +12,9 @@ export class TrabajandoConArraysComponent {
   constructor(
       private formBuilder: FormBuilder
   ) {
-    this.formulario = this.formBuilder.group({
+    /*this.formulario = this.formBuilder.group({
       nombre: ["", Validators.required],
       edad: [0, Validators.required]
-        })
+        })*/
   }
 }

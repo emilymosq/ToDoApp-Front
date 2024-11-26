@@ -18,12 +18,16 @@ import { RegistroComponent } from './registro/registro.component';
 import localePy from '@angular/common/locales/es-PY';
 import {registerLocaleData} from "@angular/common";
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+<<<<<<< HEAD
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BotonExamenComponent } from './boton-examen/boton-examen.component';
 import { ListaTareasExamenComponent } from './lista-tareas-examen/lista-tareas-examen.component';
 import { DetalleTareaExamenComponent } from './detalle-tarea-examen/detalle-tarea-examen.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TrabajandoConArraysComponent } from './trabajando-con-arrays/trabajando-con-arrays.component';
+=======
+import {ReactiveFormsModule} from "@angular/forms";
+>>>>>>> d9d3d599b1aaeb78e777718cd0f427f686c3d9bc
 registerLocaleData(localePy, 'es');
 
 @NgModule({
@@ -39,19 +43,27 @@ registerLocaleData(localePy, 'es');
     NotasBusquedaComponent,
     NuevaNotaComponent,
     RegistroComponent,
+<<<<<<< HEAD
     ConfiguracionComponent,
     BotonExamenComponent,
     ListaTareasExamenComponent,
     DetalleTareaExamenComponent,
     FormularioComponent,
     TrabajandoConArraysComponent
+=======
+    ConfiguracionComponent
+>>>>>>> d9d3d599b1aaeb78e777718cd0f427f686c3d9bc
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+<<<<<<< HEAD
       ReactiveFormsModule,
       FormsModule
+=======
+      ReactiveFormsModule
+>>>>>>> d9d3d599b1aaeb78e777718cd0f427f686c3d9bc
   ],
   providers: [{
     provide: LOCALE_ID, useValue: 'es'
