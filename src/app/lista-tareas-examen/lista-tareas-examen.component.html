@@ -1,0 +1,10 @@
+<app-formulario></app-formulario>
+<div id="contenedor-lista" class="row gap-3 justify-content-center">
+    <div class="col-3 shadow-sm py-4 px-3 rounded-3" *ngFor="let tarea of tareas">
+        <div *ngIf="estado == 'todos' || estado == '' || estado == tarea.estado">
+        <p>{{ tarea.nombre }}</p>
+        <p>{{ tarea.estado }}</p>
+        </div>
+        <button type="button" class="btn btn-secondary text-light" (click)="enviarTarea(tarea)">Más</button>
+    </div>
+</div>

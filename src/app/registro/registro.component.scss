@@ -1,0 +1,26 @@
+#container{
+  width: 100%;
+  height: 100vh;
+  background: #F9F9F9;
+  font-size: 18px;
+
+  .logo{
+    font-size: 110px;
+  }
+
+  .icon-circle{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+  }
+
+  label, p{
+    color: #6D6A6A;
+  }
+
+}

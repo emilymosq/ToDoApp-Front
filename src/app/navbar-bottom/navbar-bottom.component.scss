@@ -3,7 +3,16 @@
 
   div{
     i{
-      font-size: 2rem;
+      font-size: 40px;
+    }
+
+    .elevate-icon {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      font-size: 55px;
     }
   }
 
