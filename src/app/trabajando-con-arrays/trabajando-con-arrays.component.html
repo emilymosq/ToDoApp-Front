@@ -1,9 +1,9 @@
 <form [formGroup]="formulario" (submit)="addPersona()" class="w-75 m-auto mt-4 mb-4 py-3 px-3 rounded-3 shadow-sm row justify-content-center row-gap-3">
     <div class="col-11">
-        <input type="text" placeholder="nombre" class="form-control">
+        <input type="text" placeholder="nombre" class="form-control" formControlName="nombre">
     </div>
     <div class="col-11">
-        <input type="number" placeholder="edad" class="form-control">
+        <input type="number" placeholder="edad" class="form-control" formControlName="edad">
     </div>
     <div class="text-end">
         <button type="submit" class="btn btn-secondary">Añadir</button>
