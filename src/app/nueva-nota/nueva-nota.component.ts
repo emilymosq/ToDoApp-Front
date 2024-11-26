@@ -17,8 +17,8 @@ export class NuevaNotaComponent {
 
 
   constructor( private router: Router,
-      private fb: FormBuilder,
-      private notasService: NotasService
+               private fb: FormBuilder,
+               private notasService: NotasService
   ) {}
 
   ngOnInit(): void {
@@ -47,11 +47,11 @@ export class NuevaNotaComponent {
       const nuevaNota: Nota = {
         ...this.notaForm.value,
         fecha: fechaFormateada};
-        this.notasService.addNotas(nuevaNota);
-        this.router.navigateByUrl('/app/inicio');
-        this.notaForm.reset();
-          } else {
-        alert('Por favor, completa todos los campos');
-      }
+      this.notasService.addNotas(nuevaNota);
+      this.router.navigateByUrl('/app/inicio');
+      this.notaForm.reset();
+    } else {
+      alert('Por favor, completa todos los campos');
+    }
   }
 }

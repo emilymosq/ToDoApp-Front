@@ -21,6 +21,9 @@ import { ListaTareasExamenComponent } from './lista-tareas-examen/lista-tareas-e
 import { DetalleTareaExamenComponent } from './detalle-tarea-examen/detalle-tarea-examen.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TrabajandoConArraysComponent } from './trabajando-con-arrays/trabajando-con-arrays.component';
+import localePy from '@angular/common/locales/es-PY';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePy, 'es');
 
 @NgModule({
   declarations: [
@@ -51,7 +54,7 @@ import { TrabajandoConArraysComponent } from './trabajando-con-arrays/trabajando
       ReactiveFormsModule
   ],
   providers: [{
-    provide: LOCALE_ID, useValue: 'es'
+    provide: LOCALE_ID, useValue: 'es-ES'
   }],
   bootstrap: [AppComponent]
 })
