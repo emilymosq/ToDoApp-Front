@@ -1,4 +1,4 @@
-<form class="w-75 m-auto mt-4 mb-4 py-3 px-3 rounded-3 shadow-sm row justify-content-center row-gap-3">
+<form [formGroup]="formulario" (submit)="addPersona()" class="w-75 m-auto mt-4 mb-4 py-3 px-3 rounded-3 shadow-sm row justify-content-center row-gap-3">
     <div class="col-11">
         <input type="text" placeholder="nombre" class="form-control">
     </div>
@@ -11,10 +11,10 @@
 </form>
 
 <div class="row justify-content-around gap-3">
-    <div class="col-4 rounded-3 shadow-sm py-4 px-3">
+    <div class="col-4 rounded-3 shadow-sm py-4 px-3" *ngFor="let persona of personas">
         <p class="mb-2">nombre</p>
-        <p class="small mb-4 text-muted fw-bold"></p>
+        <p class="small mb-4 text-muted fw-bold">{{ persona.nombre }}</p>
         <p class="mb-2">edad</p>
-        <p class="small text-muted fw-bold"></p>
+        <p class="small text-muted fw-bold">{{ persona.edad }} años</p>
     </div>
 </div>

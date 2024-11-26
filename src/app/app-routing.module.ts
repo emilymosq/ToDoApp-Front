@@ -23,7 +23,6 @@ const routes: Routes = [
           {path: "lista-tareas", component: ListaTareasExamenComponent},
           {path: "detalle-tarea", component: DetalleTareaExamenComponent},
           {path: "arrays", component: TrabajandoConArraysComponent},
-          {path: "config", component: ConfiguracionComponent}
       ]},
     {path: "**", component: LoginComponent}
 ];
